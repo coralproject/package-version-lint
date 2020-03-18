@@ -12,8 +12,14 @@ To run standalone and verify that the package versions are in sync, use:
 npx @coralproject/package-version-lint
 ```
 
+Or to verify a specific version:
+
+```sh
+npx @coralproject/package-version-lint --expect 1.0.2
+```
+
 If using in CI (this example uses CircleCI), you can use a combination of the
-`--expect` flag and [bash variable substitution]() to do the following:
+`--expect` flag and [shell parameter expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html) to do the following:
 
 ```sh
 CIRCLE_TAG=v1.0.2
