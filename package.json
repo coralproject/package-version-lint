@@ -1,9 +1,9 @@
 {
   "name": "@coralproject/package-version-lint",
   "version": "1.0.2",
-  "main": "index.js",
-  "author": "Wyatt Johnson <wyatt.johnson@voxmedia.com>",
-  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "The Coral Project",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "tsc",
     "prepublish": "tsc"
