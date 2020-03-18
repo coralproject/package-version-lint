@@ -1,5 +1,5 @@
 {
-  "name": "package-version-lint",
+  "name": "@coralproject/package-version-lint",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Wyatt Johnson <wyatt.johnson@voxmedia.com>",
@@ -8,7 +8,9 @@
     "build": "tsc",
     "prepublish": "tsc"
   },
-  "bin": "./bin/package-version-lint",
+  "bin": {
+    "package-version-lint": "./bin/package-version-lint"
+  },
   "devDependencies": {
     "@types/node": "^13.9.2",
     "@types/yargs": "^15.0.4",
