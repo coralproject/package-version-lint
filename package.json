@@ -1,6 +1,6 @@
 {
   "name": "@coralproject/package-version-lint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "Wyatt Johnson <wyatt.johnson@voxmedia.com>",
   "license": "MIT",
@@ -11,6 +11,9 @@
   "bin": {
     "package-version-lint": "./bin/package-version-lint"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@types/node": "^13.9.2",
     "@types/yargs": "^15.0.4",
