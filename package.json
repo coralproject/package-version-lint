@@ -1,0 +1,20 @@
+{
+  "name": "package-version-lint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wyatt Johnson <wyatt.johnson@voxmedia.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "bin": "./bin/package-version-lint",
+  "devDependencies": {
+    "@types/node": "^13.9.2",
+    "@types/yargs": "^15.0.4",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "yargs": "^15.3.1"
+  }
+}
