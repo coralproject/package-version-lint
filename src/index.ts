@@ -2,7 +2,16 @@ import yargs from "yargs";
 import fs from "fs";
 import path from "path";
 
-const { version } = readJSON(path.join(__dirname, "..", "package.json"))!;
+function readJSON(path: string) {
+  if (!fs.existsSync(path)) {
+    return null;
+  }
+
+  return JSON.parse(fs.readFileSync(path, "utf8")) as Package;
+}
+
+const pkg = readJSON(path.join(__dirname, "..", "package.json"));
+const version = pkg ? pkg.version : "";
 
 const { argv } = yargs
   .usage(
@@ -15,20 +24,13 @@ const { argv } = yargs
   .options({
     expect: {
       type: "string",
-      description: "the version that the package.json should be checked against"
-    }
+      description:
+        "the version that the package.json should be checked against",
+    },
   });
 
 interface Package {
   version: string;
-}
-
-function readJSON(path: string) {
-  if (!fs.existsSync(path)) {
-    return null;
-  }
-
-  return JSON.parse(fs.readFileSync(path, "utf8")) as Package;
 }
 
 function compare() {
