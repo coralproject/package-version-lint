@@ -1,6 +1,6 @@
 {
   "name": "@coralproject/package-version-lint",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "author": "The Coral Project",
   "license": "Apache-2.0",
